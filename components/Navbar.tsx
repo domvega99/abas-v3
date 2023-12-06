@@ -63,7 +63,11 @@ const Navbar = () => {
                         <FiMenu size={20}/>
                     </MenubarTrigger>
                 </MenubarMenu>
-                <Theme/>
+                <MenubarMenu>
+                    <MenubarTrigger>
+                        <Theme/>
+                    </MenubarTrigger>
+                </MenubarMenu>
                 <MenubarMenu>
                     <Link href='/'>
                         <MenubarTrigger className='relative'>
@@ -181,12 +185,12 @@ const Navbar = () => {
                     </MenubarContent>
                 </MenubarMenu>
                 <MenubarMenu>
-                    <MenubarTrigger className=' rounded-full h-12 cursor-pointer'>
+                    <MenubarTrigger className=' rounded-full h-10 md:w-10 md:flex md:justify-center md:items-center cursor-pointer'>
                         <Avatar className=' w-8 h-8'>
                             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn"/>
                             <AvatarFallback>DV</AvatarFallback>
                         </Avatar>
-                        <h1 className=' font-bold text-customOrange ml-2 text-xs md:hidden'>WELCOME, DOMINIC V.</h1>
+                        <h1 className=' font-bold text-customOrange ml-2 text-xs md:hidden'>HELLO, DOMINIC V.</h1>
                     </MenubarTrigger>
                     <MenubarContent>
                         <MenubarItem>
