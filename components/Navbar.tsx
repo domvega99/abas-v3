@@ -51,17 +51,23 @@ import { IoMdGlobe } from "react-icons/io";
 import { IoMdChatboxes } from "react-icons/io";
 import { IoNotificationsSharp } from "react-icons/io5";
 import { MdLogout } from "react-icons/md";
+import { IoIosListBox } from "react-icons/io"
 
 const Navbar = () => {
   return (
     <div>
-        <div className='flex justify-start md:justify-end items-center'>
-            <Menubar className='flex flex-row-reverse md:flex-row items-center border-0 my-3'>
+        <div className='flex justify-start md:justify-end items-center mx-2'>
+            <Menubar className='flex flex-row-reverse justify-between md:justify-end w-full md:flex-row items-center border-0 my-3'>
+                <MenubarMenu>
+                    <MenubarTrigger>
+                        <FiMenu size={20}/>
+                    </MenubarTrigger>
+                </MenubarMenu>
                 <Theme/>
                 <MenubarMenu>
                     <Link href='/'>
                         <MenubarTrigger className='relative'>
-                            <IoNotificationsOutline size={15}/>
+                            <IoNotificationsOutline size={18}/>
                             <div className='w-2 h-2 rounded-full bg-customOrange absolute top-1 right-3'></div>
                         </MenubarTrigger>
                     </Link>
@@ -69,7 +75,7 @@ const Navbar = () => {
                 <MenubarMenu>
                     <div className='hidden md:block'>
                         <MenubarTrigger className='cursor-pointer'>
-                            <FaRegClock size={15}/>
+                            <FaRegClock size={18}/>
                             <p className='hidden md:block text-xs font-normal ml-2'>Nov 30, 2023 (Thu) | 10:16:31 AM</p>
                         </MenubarTrigger>
                     </div>
@@ -77,7 +83,7 @@ const Navbar = () => {
                 <MenubarMenu>
                     <Link href='/'>
                         <MenubarTrigger className='cursor-pointer'>
-                            <IoMdHome size={15}/>
+                            <IoMdHome size={18}/>
                             <p className='hidden md:block text-xs font-normal ml-2'>Home</p>
                         </MenubarTrigger>
                     </Link>
@@ -85,7 +91,7 @@ const Navbar = () => {
                 <MenubarMenu>
                     <div className='hidden md:block'>
                         <MenubarTrigger className=' cursor-pointer'>
-                            <SiWindows11 size={15}/>
+                            <SiWindows11 size={18}/>
                             <p className='hidden md:block text-xs font-normal ml-2'>Subsystems</p>
                         </MenubarTrigger>
                     </div>
@@ -97,6 +103,10 @@ const Navbar = () => {
                         <MenubarItem>
                             <FaUser />
                             <p className='ml-5'>Human Resources</p>
+                        </MenubarItem>
+                        <MenubarItem>
+                            <IoIosListBox />
+                            <p className='ml-5'>Payroll</p>
                         </MenubarItem>
                         <MenubarItem>
                             <FaCartShopping />
@@ -139,7 +149,7 @@ const Navbar = () => {
                 <MenubarMenu>
                     <div className='hidden md:block'>
                         <MenubarTrigger className='cursor-pointer'>
-                            <RiAdminFill size={15}/> 
+                            <RiAdminFill size={18}/> 
                             <p className='hidden md:block text-xs font-normal ml-2'>Administrator</p>
                         </MenubarTrigger>
                     </div>
