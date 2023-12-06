@@ -92,7 +92,7 @@ const Navbar = () => {
                     <MenubarContent>
                         <MenubarItem>
                             <FaEye />
-                            <p className='ml-5'>Manager's Dashboard</p>
+                            <p className='ml-5'>Managers Dashboard</p>
                         </MenubarItem>
                         <MenubarItem>
                             <FaUser />

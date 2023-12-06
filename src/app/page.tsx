@@ -26,23 +26,23 @@ const page = () => {
       <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4 my-5'>
         <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
           <div><FaEye size='50'/></div>
-          <CardDescription>Managers' Dashboard</CardDescription>
+          <CardDescription>Managers Dashboard</CardDescription>
         </Card>
         <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
           <div><FaEye size='50'/></div>
-          <CardDescription>Managers' Dashboard</CardDescription>
+          <CardDescription>Managers Dashboard</CardDescription>
         </Card>
         <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
           <div><FaEye size='50'/></div>
-          <CardDescription>Managers' Dashboard</CardDescription>
+          <CardDescription>Managers Dashboard</CardDescription>
         </Card>
         <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
           <div><FaEye size='50'/></div>
-          <CardDescription>Managers' Dashboard</CardDescription>
+          <CardDescription>Managers Dashboard</CardDescription>
         </Card>
         <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
           <div><FaEye size='50'/></div>
-          <CardDescription>Managers' Dashboard</CardDescription>
+          <CardDescription>Managers Dashboard</CardDescription>
         </Card>
       </div>
     </div>
