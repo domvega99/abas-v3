@@ -26,7 +26,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Sidebar/>
-            <div className='flex-1'>
+            <div className='flex-1 relative'>
               <Navbar/>
               <div className='p-5'>
                 {children}

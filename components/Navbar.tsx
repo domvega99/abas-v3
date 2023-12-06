@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Theme from './Theme'
 import { Button } from '@/components/ui/button'
 import {
@@ -52,15 +53,31 @@ import { IoMdChatboxes } from "react-icons/io";
 import { IoNotificationsSharp } from "react-icons/io5";
 import { MdLogout } from "react-icons/md";
 import { IoIosListBox } from "react-icons/io"
+import { Separator } from '@/components/ui/separator'
 
 const Navbar = () => {
+
+    const [open, setOpen] = useState(false);
+
+    const toggleOpen = () => {
+        setOpen(!open);
+    }
   return (
     <div>
-        <div className='flex justify-start md:justify-end items-center mx-2'>
-            <Menubar className='flex flex-row-reverse justify-between md:justify-end w-full md:flex-row items-center border-0 my-3'>
+        <div className='flex justify-start md:justify-end items-center'>
+            {open && 
+                <div className='absolute left-0 top-14 w-screen p-5 bg-sidebarColor transition-all duration-300 dark:bg-black h-full md:hidden'>
+                    <div className='w-full flex justify-center flex-col items-center mb-5'>
+                        <h1 className=" text-2xl font-extrabold text-customOrange">AV</h1>
+                        <h1 className=" text-2xl font-extrabold text-customOrange">ABAS V3</h1>      
+                    </div>
+                    <Separator/>   
+                </div>
+            }
+            <Menubar className='flex flex-row-reverse justify-between md:justify-end w-full md:flex-row items-center border-0 my-3 mx-2'>
                 <MenubarMenu>
-                    <MenubarTrigger>
-                        <FiMenu size={20}/>
+                    <MenubarTrigger onClick={toggleOpen} className='md:hidden'>
+                        {open ? <FiMenu size={20}/> : <FiMenu size={20}/>}   
                     </MenubarTrigger>
                 </MenubarMenu>
                 <MenubarMenu>
