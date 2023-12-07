@@ -85,7 +85,7 @@ const Navbar = () => {
                     <Sheet>
                         <SheetTrigger><FiMenu size={20}/></SheetTrigger>
                             <SheetContent side="left" className='w-11/12 bg-sidebarColor dark:bg-black'>
-                            <ScrollArea className="h-screen">
+                            <ScrollArea className=" h-5/6">
                                 <SheetHeader>
                                     <SheetTitle>
                                         <div className='flex justify-center flex-col items-center'>
@@ -133,7 +133,7 @@ const Navbar = () => {
                                             </ul>
                                         </div>
                                         <Separator/>
-                                        <div className=''>
+                                        <div className='mb-5'>
                                             <h1 className=' text-md text-left py-5 font-light'>Master Tables</h1>
                                             <ul>
                                                 <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
@@ -167,22 +167,6 @@ const Navbar = () => {
                                                 <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
                                                     <BsBarChart />
                                                     <p className='ml-5'>Finance</p>
-                                                </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
-                                                    <FiTool />
-                                                    <p className='ml-5'>Asset Management</p>
-                                                </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
-                                                    <HiMiniHandThumbUp />
-                                                    <p className='ml-5'>Compliance</p>
-                                                </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
-                                                    <IoIosFlag />
-                                                    <p className='ml-5'>Corporate Services</p>
-                                                </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
-                                                    <FaFire />
-                                                    <p className='ml-5'>IT Services</p>
                                                 </li>
                                                 <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
                                                     <FiTool />
