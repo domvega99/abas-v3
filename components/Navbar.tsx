@@ -85,18 +85,18 @@ const Navbar = () => {
                     <Sheet>
                         <SheetTrigger><FiMenu size={20}/></SheetTrigger>
                         <SheetContent side="left" className='w-11/12 bg-sidebarColor dark:bg-black'>
-                            <SheetHeader>
-                                <SheetTitle>
-                                    <div className='flex justify-center flex-col items-center'>
-                                        <h1 className=" text-2xl font-extrabold text-customOrange">AV</h1>
-                                        <h1 className=" text-2xl font-extrabold text-customOrange">ABAS V3</h1>
-                                        <div className=' w-3/4 p-2'>
-                                            <Badge className='flex justify-center items-center font-light'>Powered by AVegaIT @ 2023 version 3.1.0</Badge>
+                            <ScrollArea className=" h-full w-full">
+                                <SheetHeader>
+                                    <SheetTitle>
+                                        <div className='flex justify-center flex-col items-center'>
+                                            <h1 className=" text-2xl font-extrabold text-customOrange">AV</h1>
+                                            <h1 className=" text-2xl font-extrabold text-customOrange">ABAS V3</h1>
+                                            <div className=' w-3/4 p-2'>
+                                                <Badge className='flex justify-center items-center font-light'>Powered by AVegaIT @ 2023 version 3.1.0</Badge>
+                                            </div>
                                         </div>
-                                    </div>
-                                </SheetTitle>
-                                <Separator/>
-                                <ScrollArea className=" h-full w-full">
+                                    </SheetTitle>
+                                    <Separator/>
                                     <div>
                                         <div className='cursor-pointer flex items-center p-2 mb-2 justify-center hover:bg-slate-400 hover:text-white'>
                                             <FaRegClock size={18}/>
@@ -188,8 +188,8 @@ const Navbar = () => {
                                         </div>
                                         <Separator/>
                                     </div>
-                                </ScrollArea>
-                            </SheetHeader>
+                                </SheetHeader>
+                            </ScrollArea>
                         </SheetContent>
                     </Sheet>
                 </MenubarMenu>
