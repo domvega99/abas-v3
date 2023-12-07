@@ -80,134 +80,133 @@ const Navbar = () => {
   return (
     <div>
         <div className='flex justify-start md:justify-end items-center'>
-        
             <Menubar className='flex flex-row-reverse justify-between md:justify-end w-full md:flex-row items-center border-0 my-3 mx-2'>
                 <MenubarMenu>
                     <Sheet>
                         <SheetTrigger><FiMenu size={20}/></SheetTrigger>
-                        <ScrollArea className="">
-                            <SheetContent side="left" className=' bg-sidebarColor dark:bg-black'>
+                            <SheetContent side="left" className='w-11/12 bg-sidebarColor dark:bg-black'>
+                            <ScrollArea className="h-screen">
                                 <SheetHeader>
-                                <SheetTitle>
+                                    <SheetTitle>
+                                        <div className='flex justify-center flex-col items-center'>
+                                            <h1 className=" text-2xl font-extrabold text-customOrange">AV</h1>
+                                            <h1 className=" text-2xl font-extrabold text-customOrange">ABAS V3</h1>
+                                            <div className=' w-3/4 p-2'>
+                                                <Badge className='flex justify-center items-center font-light'>Powered by AVegaIT @ 2023 version 3.1.0</Badge>
+                                            </div>
+                                        </div>
+                                    </SheetTitle>
+                                    <Separator/>
                                     <div>
-                                        <h1 className=" text-2xl font-extrabold text-customOrange">AV</h1>
-                                        <h1 className=" text-2xl font-extrabold text-customOrange">ABAS V3</h1>
+                                        <div className='cursor-pointer flex items-center p-2 justify-center hover:bg-slate-400 hover:text-white'>
+                                            <FaRegClock size={18}/>
+                                            <p className='text-xs font-normal ml-2'>Nov 30, 2023 (Thu) | 10:16:31 AM</p>
+                                        </div>
+                                        <Separator/>
+                                        <div className=''>
+                                            <h1 className=' text-md text-left py-5 font-light'>Administrator</h1>
+                                            <ul>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <HiServerStack />
+                                                    <p className='ml-5'>Server Info</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <BiSolidError />
+                                                    <p className='ml-5'>System Logs</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <BsFillDatabaseFill />
+                                                    <p className='ml-5'>Master Tables</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <BsFillSdCardFill />
+                                                    <p className='ml-5'>Database Encoding</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <FaFilter />
+                                                    <p className='ml-5'>Database Manual Query</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <FaUserGroup />
+                                                    <p className='ml-5'>User Accounts</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <Separator/>
+                                        <div className=''>
+                                            <h1 className=' text-md text-left py-5 font-light'>Master Tables</h1>
+                                            <ul>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <FaEye />
+                                                    <p className='ml-5'>Managers Dashboard</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <FaUser />
+                                                    <p className='ml-5'>Human Resources</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <IoIosListBox />
+                                                    <p className='ml-5'>Payroll</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <FaCartShopping />
+                                                    <p className='ml-5'>Purchasing</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <MdOutlineInventory />
+                                                    <p className='ml-5'>Inventory</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <MdAccountBalanceWallet />
+                                                    <p className='ml-5'>Accounting</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <FaArrowsAlt />
+                                                    <p className='ml-5'>Marketing & Operations</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <BsBarChart />
+                                                    <p className='ml-5'>Finance</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <FiTool />
+                                                    <p className='ml-5'>Asset Management</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <HiMiniHandThumbUp />
+                                                    <p className='ml-5'>Compliance</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <IoIosFlag />
+                                                    <p className='ml-5'>Corporate Services</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <FaFire />
+                                                    <p className='ml-5'>IT Services</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <FiTool />
+                                                    <p className='ml-5'>Asset Management</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <HiMiniHandThumbUp />
+                                                    <p className='ml-5'>Compliance</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <IoIosFlag />
+                                                    <p className='ml-5'>Corporate Services</p>
+                                                </li>
+                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                    <FaFire />
+                                                    <p className='ml-5'>IT Services</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <Separator/>
                                     </div>
-                                </SheetTitle>
-                                <Separator/>
-                                <div>
-                                    <div className='cursor-pointer flex items-center p-5 justify-center hover:bg-slate-400 hover:text-white'>
-                                        <FaRegClock size={18}/>
-                                        <p className='text-md font-normal ml-2'>Nov 30, 2023 (Thu) | 10:16:31 AM</p>
-                                    </div>
-                                    <Separator/>
-                                    <div className=''>
-                                        <h1 className=' text-md text-left py-5 font-light'>Administrator</h1>
-                                        <ul>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <HiServerStack />
-                                                <p className='ml-5'>Server Info</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <BiSolidError />
-                                                <p className='ml-5'>System Logs</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <BsFillDatabaseFill />
-                                                <p className='ml-5'>Master Tables</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <BsFillSdCardFill />
-                                                <p className='ml-5'>Database Encoding</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <FaFilter />
-                                                <p className='ml-5'>Database Manual Query</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <FaUserGroup />
-                                                <p className='ml-5'>User Accounts</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <Separator/>
-                                    <div className=''>
-                                        <h1 className=' text-md text-left py-5 font-light'>Master Tables</h1>
-                                        <ul>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <FaEye />
-                                                <p className='ml-5'>Managers Dashboard</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <FaUser />
-                                                <p className='ml-5'>Human Resources</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <IoIosListBox />
-                                                <p className='ml-5'>Payroll</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <FaCartShopping />
-                                                <p className='ml-5'>Purchasing</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <MdOutlineInventory />
-                                                <p className='ml-5'>Inventory</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <MdAccountBalanceWallet />
-                                                <p className='ml-5'>Accounting</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <FaArrowsAlt />
-                                                <p className='ml-5'>Marketing & Operations</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <BsBarChart />
-                                                <p className='ml-5'>Finance</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <FiTool />
-                                                <p className='ml-5'>Asset Management</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <HiMiniHandThumbUp />
-                                                <p className='ml-5'>Compliance</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <IoIosFlag />
-                                                <p className='ml-5'>Corporate Services</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <FaFire />
-                                                <p className='ml-5'>IT Services</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <FiTool />
-                                                <p className='ml-5'>Asset Management</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <HiMiniHandThumbUp />
-                                                <p className='ml-5'>Compliance</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <IoIosFlag />
-                                                <p className='ml-5'>Corporate Services</p>
-                                            </li>
-                                            <li className='flex items-center text-lg p-2 hover:bg-slate-400 hover:text-white'>
-                                                <FaFire />
-                                                <p className='ml-5'>IT Services</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <Separator/>
-                                </div>
                                 </SheetHeader>
-                                <SheetFooter className='absolute bottom-5 w-auto'>
-                                    <Badge className='flex justify-center items-center font-light'>Powered by AVegaIT @ 2023 version 3.1.0</Badge>
-                                </SheetFooter>
-                            </SheetContent>
-                        </ScrollArea>
+                            </ScrollArea>
+                        </SheetContent>
                     </Sheet>
                 </MenubarMenu>
                 <MenubarMenu>
