@@ -83,7 +83,7 @@ const Navbar = () => {
             <Menubar className='flex flex-row-reverse justify-between md:justify-end w-full md:flex-row items-center border-0 my-3 mx-2'>
                 <MenubarMenu>
                     <Sheet>
-                        <SheetTrigger><FiMenu size={20}/></SheetTrigger>
+                        <SheetTrigger className='w-8 h-8 flex justify-center items-center mr-2'><FiMenu size={25}/></SheetTrigger>
                         <SheetContent side="left" className='w-11/12 bg-sidebarColor dark:bg-black'>
                             <ScrollArea className=" h-full w-full">
                                 <SheetHeader>
