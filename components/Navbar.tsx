@@ -98,12 +98,12 @@ const Navbar = () => {
                                     </SheetTitle>
                                     <Separator/>
                                     <div>
-                                        <div className='cursor-pointer flex items-center p-2 justify-center hover:bg-slate-400 hover:text-white'>
+                                        <div className='cursor-pointer flex items-center p-2 mb-2 justify-center hover:bg-slate-400 hover:text-white'>
                                             <FaRegClock size={18}/>
                                             <p className='text-xs font-normal ml-2'>Nov 30, 2023 (Thu) | 10:16:31 AM</p>
                                         </div>
                                         <Separator/>
-                                        <div className=''>
+                                        <div className='mb-2'>
                                             <h1 className=' text-md text-left py-5 font-light'>Administrator</h1>
                                             <ul>
                                                 <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
@@ -133,7 +133,7 @@ const Navbar = () => {
                                             </ul>
                                         </div>
                                         <Separator/>
-                                        <div className='mb-5'>
+                                        <div className='mb-2'>
                                             <h1 className=' text-md text-left py-5 font-light'>Master Tables</h1>
                                             <ul>
                                                 <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
