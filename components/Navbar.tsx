@@ -85,7 +85,7 @@ const Navbar = () => {
                     <Sheet>
                         <SheetTrigger><FiMenu size={20}/></SheetTrigger>
                             <SheetContent side="left" className='w-11/12 bg-sidebarColor dark:bg-black'>
-                            <ScrollArea className=" h-5/6">
+                            <ScrollArea className=" h-full">
                                 <SheetHeader>
                                     <SheetTitle>
                                         <div className='flex justify-center flex-col items-center'>
