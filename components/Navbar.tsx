@@ -83,7 +83,7 @@ const Navbar = () => {
             <Menubar className='flex flex-row-reverse justify-between md:justify-end w-full md:flex-row items-center border-0 my-3 mx-2'>
                 <MenubarMenu>
                     <Sheet>
-                        <SheetTrigger className='w-8 h-8 flex justify-center items-center mr-2'><FiMenu size={25}/></SheetTrigger>
+                        <SheetTrigger className='w-8 h-8 flex justify-center items-center mr-2 md:hidden'><FiMenu size={25}/></SheetTrigger>
                         <SheetContent side="left" className='w-11/12 bg-sidebarColor dark:bg-black'>
                             <ScrollArea className=" h-full w-full">
                                 <SheetHeader>
@@ -98,7 +98,7 @@ const Navbar = () => {
                                     </SheetTitle>
                                     <Separator/>
                                     <div>
-                                        <div className='cursor-pointer flex items-center p-2 mb-2 justify-center hover:bg-slate-400 hover:text-white'>
+                                        <div className='cursor-pointer flex items-center p-2 mb-2 justify-center hover:bg-customOrange hover:text-white'>
                                             <FaRegClock size={18}/>
                                             <p className='text-xs font-normal ml-2'>Nov 30, 2023 (Thu) | 10:16:31 AM</p>
                                         </div>
@@ -106,29 +106,31 @@ const Navbar = () => {
                                         <div className='mb-2'>
                                             <h1 className=' text-md text-left py-5 font-light'>Administrator</h1>
                                             <ul>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <HiServerStack />
                                                     <p className='ml-5'>Server Info</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <BiSolidError />
                                                     <p className='ml-5'>System Logs</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <BsFillDatabaseFill />
                                                     <p className='ml-5'>Master Tables</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <BsFillSdCardFill />
                                                     <p className='ml-5'>Database Encoding</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <FaFilter />
                                                     <p className='ml-5'>Database Manual Query</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
-                                                    <FaUserGroup />
-                                                    <p className='ml-5'>User Accounts</p>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
+                                                    <Link href='/user' className='flex items-center'>
+                                                        <FaUserGroup />
+                                                        <p className='ml-5'>User Accounts</p>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -136,51 +138,51 @@ const Navbar = () => {
                                         <div className='mb-2'>
                                             <h1 className=' text-md text-left py-5 font-light'>Master Tables</h1>
                                             <ul>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <FaEye />
                                                     <p className='ml-5'>Managers Dashboard</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <FaUser />
                                                     <p className='ml-5'>Human Resources</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <IoIosListBox />
                                                     <p className='ml-5'>Payroll</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <FaCartShopping />
                                                     <p className='ml-5'>Purchasing</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <MdOutlineInventory />
                                                     <p className='ml-5'>Inventory</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <MdAccountBalanceWallet />
                                                     <p className='ml-5'>Accounting</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <FaArrowsAlt />
                                                     <p className='ml-5'>Marketing & Operations</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <BsBarChart />
                                                     <p className='ml-5'>Finance</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <FiTool />
                                                     <p className='ml-5'>Asset Management</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <HiMiniHandThumbUp />
                                                     <p className='ml-5'>Compliance</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <IoIosFlag />
                                                     <p className='ml-5'>Corporate Services</p>
                                                 </li>
-                                                <li className='flex items-center text-sm p-2 hover:bg-slate-400 hover:text-white'>
+                                                <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <FaFire />
                                                     <p className='ml-5'>IT Services</p>
                                                 </li>
@@ -309,8 +311,10 @@ const Navbar = () => {
                             <p className='ml-5'>Database Manual Query</p>
                         </MenubarItem>
                         <MenubarItem>
-                            <FaUserGroup />
-                            <p className='ml-5'>User Accounts</p>
+                            <Link href='/user' className='flex items-center'>
+                                <FaUserGroup />
+                                <p className='ml-5'>User Accounts</p>
+                            </Link>
                         </MenubarItem>
                     </MenubarContent>
                 </MenubarMenu>

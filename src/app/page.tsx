@@ -25,7 +25,7 @@ import {
 
 const page = () => {
   return (
-    <div className=' w-full'>
+    <div className=' w-full p-5'>
       <div className='mb-5'>
         <h2 className="text-lg md:text-xl font-semibold tracking-tight text-customOrange">
           ADMINISTRATOR DASHBOARD
