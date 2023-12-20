@@ -6,8 +6,8 @@ import { Badge } from "@/components/ui/badge"
 
 export function Sidebar() {
   return (
-    <div className="min-h-screen bg-sidebarColor dark:bg-black">
-      <div className="hidden lg:block space-y-4 w-full">
+    <div className="min-h-screen h-full bg-sidebarColor dark:bg-black hidden lg:block w-64">
+      <div className="space-y-4 w-full">
         <div className="">
             <div className="p-5 flex justify-center">
               <h1 className=" text-2xl font-extrabold text-customOrange">AV ABAS V3</h1>
