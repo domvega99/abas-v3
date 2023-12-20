@@ -123,7 +123,7 @@ const LoginPage: React.FC<LoginPageProps> = () => {
 
   return (
     <div className='flex justify-center items-center h-screen'>
-        <Card className="md:w-[500px] z-10">
+        <Card className="md:w-[500px] z-10 m-2">
             <CardHeader className='flex flex-col items-center'>
                 <CardTitle>AVega Business Automation System</CardTitle>
                 <CardDescription>V3.1.0</CardDescription>
@@ -132,7 +132,6 @@ const LoginPage: React.FC<LoginPageProps> = () => {
                 <form onSubmit={handleLogin}>
                     <div className="grid w-full items-center gap-4">
                         <div className="flex flex-col space-y-1.5">
-                            {/* <Label htmlFor="name">Username: </Label> */}
                             <Input 
                                 className=' rounded-full'
                                 id="name" 
@@ -145,7 +144,6 @@ const LoginPage: React.FC<LoginPageProps> = () => {
                             )}
                         </div>
                         <div className="flex flex-col space-y-1.5">
-                            {/* <Label htmlFor="name">Password: </Label> */}
                             <div className='relative'>
                                 <Input 
                                     className=' rounded-full'
