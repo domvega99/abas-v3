@@ -56,7 +56,7 @@ const ResetPage: React.FC<ResetPageProps> = () => {
 
 
   return (
-    <div className='flex justify-center items-center h-screen'>
+    <div className='flex justify-center items-center md:h-screen'>
         <Card className="md:w-[500px] z-10 m-2">
             <CardHeader className='flex flex-col items-center justify-center'>
                 <CardTitle>Reset Password</CardTitle>

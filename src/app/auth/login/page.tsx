@@ -36,6 +36,8 @@ import { Toaster } from '@/components/ui/toaster';
 import { ToastTitle, ToastDescription, ToastAction, ToastProvider, ToastClose, ToastViewport } from '@/components/ui/toast';
 import { Toast } from '@/components/ui/toast';
 import Background from '../../../../components/Background';
+import { LuKeyRound } from "react-icons/lu";
+import { FaRegUser } from "react-icons/fa";
 
 interface LoginPageProps {}
 
@@ -122,23 +124,31 @@ const LoginPage: React.FC<LoginPageProps> = () => {
   };
 
   return (
-    <div className='flex justify-center items-center h-screen'>
-        <Card className="md:w-[500px] z-10 m-2">
-            <CardHeader className='flex flex-col items-center'>
-                <CardTitle>AVega Business Automation System</CardTitle>
-                <CardDescription>V3.1.0</CardDescription>
-            </CardHeader>
-            <CardContent>
+    <div className='flex justify-center items-center md:h-screen'>
+        <div className="md:w-[500px] z-10 m-5 w-full border-none">
+            <div className='flex flex-col items-center font-bold text-lg my-5'>
+                <div className=' text-9xl bg-red-500 px-5 pb-3 flex items-center justify-center text-white my-5'>AV</div>
+                <div className='flex text-xl'>
+                    <h1>Welcome to</h1>
+                    <h1 className='ml-1 text-customOrange'>ABAS V3</h1>
+                </div>
+            </div>
+            <div>
                 <form onSubmit={handleLogin}>
                     <div className="grid w-full items-center gap-4">
                         <div className="flex flex-col space-y-1.5">
-                            <Input 
-                                className=' rounded-full'
-                                id="name" 
-                                placeholder="Username" 
-                                type='text' 
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}/>
+                            <div className='relative'>
+                                <Input 
+                                    className=' rounded-full pl-8'
+                                    id="name" 
+                                    placeholder="Username" 
+                                    type='text' 
+                                    value={username}
+                                    onChange={(e) => setUsername(e.target.value)}/>
+                                <div className='absolute left-1 top-1 p-2 rounded-full text-customOrange'>
+                                    <FaRegUser/>
+                                </div>
+                            </div>
                             {errorFields.username && (
                                 <div className="text-red-500 text-xs italic">{errorFields.username}</div>
                             )}
@@ -146,12 +156,15 @@ const LoginPage: React.FC<LoginPageProps> = () => {
                         <div className="flex flex-col space-y-1.5">
                             <div className='relative'>
                                 <Input 
-                                    className=' rounded-full'
+                                    className=' rounded-full pl-8'
                                     id="password" 
                                     placeholder="Password" 
                                     type={eyePassword} 
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}/>
+                                <div className='absolute left-1 top-1 p-2 rounded-full text-customOrange'>
+                                    <LuKeyRound/>
+                                </div>
                                 <div className='absolute right-1 top-1'>
                                     {eyePassword == 'password' ? 
                                         <div className='rounded-full p-2 bg-customOrange cursor-pointer text-white'onClick={handleOpenEye}><RiEyeCloseLine/></div> : 
@@ -194,8 +207,8 @@ const LoginPage: React.FC<LoginPageProps> = () => {
                         </div>
                     </div>
                 </form>
-            </CardContent>
-        </Card>
+            </div>
+        </div>
     </div>
   );
 };
