@@ -24,22 +24,24 @@ export default function RootLayout({
     <>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body className='flex'>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {!isLoginPage && !isResetPage && <Sidebar />}
-            <div className='flex-1 relative'>
-              {!isLoginPage && !isResetPage && <Navbar/>}
-              <div>
-                {children}
-                <Toaster/>
+        <body>
+          <main className='flex'>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              {!isLoginPage && !isResetPage && <Sidebar />}
+              <div className='flex-1 relative'>
+                {!isLoginPage && !isResetPage && <Navbar/>}
+                <div>
+                  {children}
+                  <Toaster/>
+                </div>
               </div>
-            </div>
-          </ThemeProvider>
+            </ThemeProvider>
+          </main>
         </body>
       </html>
     </>
