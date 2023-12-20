@@ -177,9 +177,9 @@ const LoginPage: React.FC<LoginPageProps> = () => {
                             )}
                         </div>
                         <div className=''>
-                            <button 
+                            <Button 
                                 className='w-full rounded-full' 
-                                type='submit'>Login</button>
+                                type='submit'>Login</Button>
                             <AlertDialog>
                                 <AlertDialogTrigger className='text-xs font-normal text-center w-full mt-2 hover:text-customOrange'>Forgot Password?</AlertDialogTrigger>
                                 <AlertDialogContent>
