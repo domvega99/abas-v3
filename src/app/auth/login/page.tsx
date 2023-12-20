@@ -127,7 +127,7 @@ const LoginPage: React.FC<LoginPageProps> = () => {
     <div className='flex justify-center items-center md:h-screen'>
         <div className="md:w-[500px] z-10 m-5 w-full border-none">
             <div className='flex flex-col items-center font-bold text-lg my-5'>
-                <div className=' text-9xl bg-red-500 px-5 pb-3 flex items-center justify-center text-white my-5'>AV</div>
+                <div className=' text-9xl bg-red-500 px-5 flex items-center justify-center text-white my-5'>AV</div>
                 <div className='flex text-xl'>
                     <h1>Welcome to</h1>
                     <h1 className='ml-1 text-customOrange'>ABAS V3</h1>
