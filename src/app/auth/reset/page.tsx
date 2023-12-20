@@ -57,10 +57,9 @@ const ResetPage: React.FC<ResetPageProps> = () => {
 
   return (
     <div className='flex justify-center items-center h-screen'>
-        <Card className="w-[500px] z-10">
-            <CardHeader className='flex flex-col items-center'>
-                <CardTitle>AVega Business Automation System</CardTitle>
-                <CardDescription>V3.1.0</CardDescription>
+        <Card className="md:w-[500px] z-10">
+            <CardHeader className='flex flex-col items-center justify-center'>
+                <CardTitle>Reset Password</CardTitle>
             </CardHeader>
             <CardContent>
                 <form>
