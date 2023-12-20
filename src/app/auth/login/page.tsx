@@ -69,7 +69,7 @@ const LoginPage: React.FC<LoginPageProps> = () => {
   const handleOpenEye = () => {setEyePassword('text')}
   const handleCloseEye = () => {setEyePassword('password')}
   
-  const handleLogin = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const requestData = { username, password };
     try {
@@ -134,7 +134,7 @@ const LoginPage: React.FC<LoginPageProps> = () => {
                 </div>
             </div>
             <div>
-                <form>
+                <form onSubmit={handleLogin}>
                     <div className="grid w-full items-center gap-4">
                         <div className="flex flex-col space-y-1.5">
                             <div className='relative'>
@@ -179,7 +179,7 @@ const LoginPage: React.FC<LoginPageProps> = () => {
                         <div className=''>
                             <Button 
                                 className='w-full rounded-full' 
-                                type='button' onClick={handleLogin}>Login</Button>
+                                type='submit'>Login</Button>
                             <AlertDialog>
                                 <AlertDialogTrigger className='text-xs font-normal text-center w-full mt-2 hover:text-customOrange'>Forgot Password?</AlertDialogTrigger>
                                 <AlertDialogContent>
