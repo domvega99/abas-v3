@@ -160,7 +160,7 @@ const Page = () => {
     // </div>
     <div>
     {loading ? <Loading/> : ''}
-    <div className='px-5'>
+    <div className='md:px-5'>
         <div className='w-full my-5 border bg-white dark:bg-customBgDarkPage rounded-xl'>
             <div className='p-5'>
                 <div className='mb-5'>
