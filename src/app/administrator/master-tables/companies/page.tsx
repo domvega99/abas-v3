@@ -9,7 +9,7 @@ import { PlusCircledIcon } from '@radix-ui/react-icons'
 import { companyColumns } from '@/components/table/column/companyColumn'
 import Link from 'next/link'
 
-const page = () => {
+const Page = () => {
     const [companies, setCompanies] = useState<Company[]>([]);
     const [loading, setLoading] = useState(true);
 
@@ -58,4 +58,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
