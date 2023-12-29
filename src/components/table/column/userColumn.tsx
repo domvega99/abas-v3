@@ -35,10 +35,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { User } from "../../../types/userTypes";
-import { Badge } from "../ui/badge"
+import { User } from "../../../../types/userTypes";
+import { Badge } from "../../ui/badge"
 
-export const columns: ColumnDef<User>[] = [
+export const userColumns: ColumnDef<User>[] = [
       // {
       //   id: "select",
       //   header: ({ table }) => (
@@ -74,7 +74,7 @@ export const columns: ColumnDef<User>[] = [
             </Button>
           )
         },
-        cell: ({ row }) => <div className=" text-sm">{row.getValue("id")}</div>,
+        cell: ({ row }) => <div className=" text-xs font-semibold">{row.getValue("id")}</div>,
       },
       {
         accessorKey: "username",
@@ -89,7 +89,7 @@ export const columns: ColumnDef<User>[] = [
             </Button>
           )
         },
-        cell: ({ row }) => <div className="lowercase text-sm">{row.getValue("username")}</div>,
+        cell: ({ row }) => <div className="lowercase text-xs font-semibold">{row.getValue("username")}</div>,
       },
       {
         accessorKey: "first_name",
@@ -104,7 +104,7 @@ export const columns: ColumnDef<User>[] = [
             </Button>
           )
         },
-        cell: ({ row }) => <div className="uppercase text-sm">{row.getValue("first_name")}</div>,
+        cell: ({ row }) => <div className="uppercase text-xs font-semibold">{row.getValue("first_name")}</div>,
       },
       {
         accessorKey: "middle_name",
@@ -119,7 +119,7 @@ export const columns: ColumnDef<User>[] = [
             </Button>
           )
         },
-        cell: ({ row }) => <div className="uppercase text-sm">{row.getValue("middle_name")}</div>,
+        cell: ({ row }) => <div className="uppercase text-xs font-semibold">{row.getValue("middle_name")}</div>,
       },
       {
         accessorKey: "last_name",
@@ -134,7 +134,7 @@ export const columns: ColumnDef<User>[] = [
             </Button>
           )
         },
-        cell: ({ row }) => <div className="uppercase text-sm">{row.getValue("last_name")}</div>,
+        cell: ({ row }) => <div className="uppercase text-xs font-semibold">{row.getValue("last_name")}</div>,
       },
       {
         accessorKey: "email",
@@ -149,7 +149,7 @@ export const columns: ColumnDef<User>[] = [
             </Button>
           )
         },
-        cell: ({ row }) => <div className="lowercase text-sm">{row.getValue("email")}</div>,
+        cell: ({ row }) => <div className="lowercase text-xs font-semibold">{row.getValue("email")}</div>,
       },
       {
         accessorKey: "role",
@@ -164,7 +164,7 @@ export const columns: ColumnDef<User>[] = [
             </Button>
           )
         },
-        cell: ({ row }) => <div className=" text-sm">{row.getValue("role")}</div>,
+        cell: ({ row }) => <div className=" text-xs font-semibold">{row.getValue("role")}</div>,
       },
       {
         accessorKey: "user_location",
@@ -179,7 +179,7 @@ export const columns: ColumnDef<User>[] = [
             </Button>
           )
         },
-        cell: ({ row }) => <div className=" text-sm">{row.getValue("user_location")}</div>,
+        cell: ({ row }) => <div className=" text-xs font-semibold">{row.getValue("user_location")}</div>,
       },
       {
         accessorKey: "stat",
@@ -194,7 +194,7 @@ export const columns: ColumnDef<User>[] = [
             </Button>
           )
         },
-        cell: ({ row }) => <div className=" text-sm"><Badge>{row.getValue("stat")}</Badge></div>,
+        cell: ({ row }) => <div className=" text-xs font-semibold"><Badge>{row.getValue("stat")}</Badge></div>,
       },
       {
         accessorKey: "signature",
@@ -209,7 +209,7 @@ export const columns: ColumnDef<User>[] = [
             </Button>
           )
         },
-        cell: ({ row }) => <div className=" text-sm">{row.getValue("signature")}</div>,
+        cell: ({ row }) => <div className=" text-xs font-semibold">{row.getValue("signature")}</div>,
       },
       
       {
@@ -221,7 +221,7 @@ export const columns: ColumnDef<User>[] = [
           return (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="h-8 w-8 p-0">
+                <Button variant="ghost" className="h-6 w-6 p-0">
                   <span className="sr-only">Open menu</span>
                   <MoreHorizontal className="h-4 w-4" />
                 </Button>

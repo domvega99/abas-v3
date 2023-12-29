@@ -69,28 +69,23 @@ import { AiOutlineClose } from "react-icons/ai";
 import { HiOutlineHome } from "react-icons/hi2";
 import { Badge } from '@/components/ui/badge'
 import { ScrollArea } from '@/components/ui/scroll-area'
+import Title from '@/components/title/Title'
 
 const Navbar = () => {
 
-    const [open, setOpen] = useState(false);
-
-    const toggleOpen = () => {
-        setOpen(!open);
-    }
   return (
-    <div>
+    <div className='bg-white dark:bg-customBgDarkPage'>
         <div className='flex justify-start md:justify-end items-center'>
             <Menubar className='flex flex-row-reverse justify-between md:justify-end w-full md:flex-row items-center border-0 my-3 mx-2'>
                 <MenubarMenu>
                     <Sheet>
-                        <SheetTrigger className='w-8 h-8 flex justify-center items-center mr-2 md:hidden'><FiMenu size={25}/></SheetTrigger>
+                        <SheetTrigger className='w-8 h-8 flex justify-center items-center mr-2 lg:hidden'><FiMenu size={25}/></SheetTrigger>
                         <SheetContent side="left" className='w-11/12 bg-sidebarColor dark:bg-black'>
                             <ScrollArea className=" h-full w-full">
                                 <SheetHeader>
                                     <SheetTitle>
                                         <div className='flex justify-center flex-col items-center'>
-                                            <h1 className=" text-2xl font-extrabold text-customOrange">AV</h1>
-                                            <h1 className=" text-2xl font-extrabold text-customOrange">ABAS V3</h1>
+                                            <Title/>
                                             <div className=' w-3/4 p-2'>
                                                 <Badge className='flex justify-center items-center font-light'>Powered by AVegaIT @ 2023 version 3.1.0</Badge>
                                             </div>
@@ -115,8 +110,10 @@ const Navbar = () => {
                                                     <p className='ml-5'>System Logs</p>
                                                 </li>
                                                 <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
-                                                    <BsFillDatabaseFill />
-                                                    <p className='ml-5'>Master Tables</p>
+                                                    <Link href='/administrator/master-tables' className='flex items-center'>
+                                                        <BsFillDatabaseFill />
+                                                        <p className='ml-5'>Master Tables</p>
+                                                    </Link>
                                                 </li>
                                                 <li className='flex items-center text-sm p-2 hover:bg-customOrange hover:text-white'>
                                                     <BsFillSdCardFill />
@@ -219,7 +216,7 @@ const Navbar = () => {
                 <MenubarMenu>
                     <Link href='/'>
                         <MenubarTrigger className='cursor-pointer'>
-                            <HiOutlineHome size={18}/>
+                            <IoMdHome size={18}/>
                             <p className='hidden md:block text-xs font-normal ml-2'>Home</p>
                         </MenubarTrigger>
                     </Link>
@@ -299,8 +296,10 @@ const Navbar = () => {
                             <p className='ml-5'>System Logs</p>
                         </MenubarItem>
                         <MenubarItem>
-                            <BsFillDatabaseFill />
-                            <p className='ml-5'>Master Tables</p>
+                            <Link href='/administrator/master-tables' className='flex items-center'>
+                                <BsFillDatabaseFill />
+                                <p className='ml-5'>Master Tables</p>
+                            </Link>
                         </MenubarItem>
                         <MenubarItem>
                             <BsFillSdCardFill />

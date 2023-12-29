@@ -16,11 +16,18 @@ module.exports = {
       },
     },
     extend: {
+      fontSize: {
+        '11': '11px',
+      },
       colors: {
         customOrange: '#F97316',
-        customRed: '#E11D48',
+        customRed: '#DC2626',
         customBgRed: '#E42F5C',
-        sidebarColor: '#F4F5F8',
+        customBgPage: '#FAF4F6',
+        customBgDarkPage: '#0C0A09',
+        customBgDarkGreenStatus: '#1E363C',
+        customBgDarkRedStatus: '#402834',
+        sidebarColor: '#F20D48',  
         successColor: '#16A34A',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

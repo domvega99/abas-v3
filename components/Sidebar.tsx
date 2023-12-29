@@ -3,24 +3,23 @@ import { Button } from "@/components/ui/button"
 import { FiMenu } from "react-icons/fi"
 import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
+import Title from "@/components/title/Title"
 
 export function Sidebar() {
   return (
     <div className="min-h-screen h-full bg-sidebarColor dark:bg-black hidden lg:block w-64">
       <div className="space-y-4 w-full">
         <div className="">
-            <div className="p-5 flex justify-center">
-              <h1 className=" text-2xl font-extrabold text-customOrange">AV ABAS V3</h1>
-            </div>
+            <Title/>
             <div className=' flex justify-between items-start p-5'>
-                <div className="">
+                <div className="text-white">
                     <p className="mb-2 text-sm font-normal tracking-tight">Welcome!</p>
                     <p className=" italic font-medium">Dominic Anuta Vega</p>
                     <Badge>Administrator</Badge>
                 </div>
-                <div className=" cursor-pointer">
+                {/* <div className=" cursor-pointer">
                     <FiMenu size={25}/>
-                </div>
+                </div> */}
             </div>
             <Separator/>
             <div className="space-y-1">

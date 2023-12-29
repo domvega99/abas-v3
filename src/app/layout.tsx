@@ -24,7 +24,7 @@ export default function RootLayout({
     <>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body className='flex items-stretch'>
+        <body className='flex items-stretch bg-customBgPage dark:bg-customBgDarkPage'>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

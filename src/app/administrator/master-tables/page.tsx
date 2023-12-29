@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { Sidebar } from '../../components/Sidebar'
 import { Separator } from '@/components/ui/separator'
 import { FaEye } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
@@ -29,7 +28,7 @@ const page = () => {
     <div className=' w-full p-5'>
       <div className='mb-5'>
         <h2 className="text-lg md:text-xl font-semibold tracking-tight text-customOrange">
-          ADMINISTRATOR DASHBOARD
+          ADMINISTRATOR MASTER TABLES
         </h2>
         <p className="text-xs md:text-sm text-muted-foreground">
           Top picks for you. Updated daily.
@@ -38,54 +37,38 @@ const page = () => {
       <Separator/>
       <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4 my-5'>
         <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
-          <div><FaEye size='50'/></div>
-          <CardDescription>Managers Dashboard</CardDescription>
-        </Card>
-        <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
-          <div><FaUser size='50'/></div>
-          <CardDescription>Human Resources</CardDescription>
-        </Card>
-        <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
-          <div><IoIosListBox size='50'/></div>
-          <CardDescription>Payroll</CardDescription>
-        </Card>
-        <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
-          <Link href='/purchasing'>
-            <div><FaCartShopping size='50'/></div>
-            <CardDescription>Purchasing</CardDescription>
+          <Link href='/administrator/master-tables/companies' className='flex flex-col items-center'>
+            <div><IoIosListBox size='50'/></div>
+            <CardDescription>Companies</CardDescription>
           </Link>
         </Card>
         <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
-          <div><MdOutlineInventory size='50'/></div>
-          <CardDescription>Inventory</CardDescription>
+          <div><IoIosListBox size='50'/></div>
+          <CardDescription>Departments</CardDescription>
         </Card>
         <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
-          <div><MdAccountBalanceWallet size='50'/></div>
-          <CardDescription>Accounting</CardDescription>
+          <div><IoIosListBox size='50'/></div>
+          <CardDescription>Divisions</CardDescription>
         </Card>
         <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
-          <div><FaArrowsAlt size='50'/></div>
-          <CardDescription>Marketing & Operations</CardDescription>
+          <div><IoIosListBox size='50'/></div>
+          <CardDescription>Sections</CardDescription>
         </Card>
         <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
-          <div><BsBarChart size='50'/></div>
-          <CardDescription>Finance</CardDescription>
+          <div><IoIosListBox size='50'/></div>
+          <CardDescription>Sub-sections</CardDescription>
         </Card>
         <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
-          <div><FiTool size='50'/></div>
-          <CardDescription>Asset Management</CardDescription>
+          <div><IoIosListBox size='50'/></div>
+          <CardDescription>Positions</CardDescription>
         </Card>
         <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
-          <div><HiMiniHandThumbUp size='50'/></div>
-          <CardDescription>Compliance</CardDescription>
+          <div><IoIosListBox size='50'/></div>
+          <CardDescription>Salary Grades</CardDescription>
         </Card>
         <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
-          <div><IoIosFlag size='50'/></div>
-          <CardDescription>Corporate Services</CardDescription>
-        </Card>
-        <Card className='p-5 flex flex-col justify-center items-center hover:shadow-lg dark:hover:shadow-gray-400 cursor-pointer'>
-          <div><FaFire size='50'/></div>
-          <CardDescription>IT Services</CardDescription>
+          <div><IoIosListBox size='50'/></div>
+          <CardDescription>Tax Codes</CardDescription>
         </Card>
       </div>
     </div>
