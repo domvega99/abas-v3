@@ -13,7 +13,7 @@ import { User } from '../../../types/userTypes';
 import Loading from '../../../components/Loading';
 import { fetchUsers } from '../../../api/User/userApi';
 
-const page = () => {
+const Page = () => {
   const [userData, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
   
@@ -58,4 +58,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

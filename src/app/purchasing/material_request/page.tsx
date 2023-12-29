@@ -32,7 +32,7 @@ import {
 } from "@/components/ui/tabs"
 import Link from 'next/link';
 
-const page = () => {
+const Page = () => {
   const [request, getRequest] = useState<Request[]>([]);
   const [loading, setLoading] = useState(true);
   
@@ -197,4 +197,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
