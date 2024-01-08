@@ -14,7 +14,7 @@ import { useParams } from 'next/navigation'
 import Loading from '../../../../../../components/Loading'
 
 
-const page = () => {
+const SingleRequest = () => {
     const { id } = useParams<{ id: string }>();
     const [request, setRequest] = useState<Requisition[]>([]);
     const [loading, setLoading] = useState(true);
@@ -72,4 +72,4 @@ const page = () => {
   )
 }
 
-export default page
+export default SingleRequest

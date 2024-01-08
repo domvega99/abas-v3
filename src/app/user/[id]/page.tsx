@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { Button } from "@/components/ui/button"
 import {
@@ -19,7 +20,7 @@ import {
 import UserForm from '@/components/form/userForm'
 import PermissionForm from '@/components/form/permissionForm'
 
-const page = () => {
+const SingleUser = () => {
 
   return (
     <div>
@@ -45,4 +46,4 @@ const page = () => {
   )
 }
 
-export default page
+export default SingleUser
