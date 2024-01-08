@@ -35,24 +35,26 @@ const Page = () => {
   return (
     <div>
       {loading ? <Loading/> : ''}
-      <div className='w-full my-5'>
-        <div className='px-5'>
-          <div className='my-2'>
-            <h2 className="text-lg md:text-xl font-semibold tracking-tight">
-              User Accounts
-            </h2>
+      <div className='md:px-5'>
+        <div className='w-full my-5 border bg-white dark:bg-customBgDarkPage rounded-xl'>
+          <div className='px-5'>
+            <div className='my-2'>
+              <h2 className="text-lg md:text-xl font-semibold tracking-tight">
+                User Accounts
+              </h2>
+            </div>
+            <div className='flex items-center'>
+              <Button size="sm" className="h-8 bg-green-500 hover:bg-green-400">
+                <PlusCircledIcon className="mr-2 h-4 w-4" />
+                User
+              </Button>
+              <Button size="sm" className="h-8 ml-2" variant="secondary">
+                Refresh
+              </Button>
+            </div>
           </div>
-          <div className='flex items-center'>
-            <Button size="sm" className="h-8 bg-green-500 hover:bg-green-400">
-              <PlusCircledIcon className="mr-2 h-4 w-4" />
-              User
-            </Button>
-            <Button size="sm" className="h-8 ml-2" variant="secondary">
-              Refresh
-            </Button>
-          </div>
-        </div>
           <TableData data={userData} columns={userColumns} loading={loading}/>
+        </div>
       </div>
     </div>
   )

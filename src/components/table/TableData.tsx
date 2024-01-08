@@ -119,11 +119,11 @@ const TableData = <T extends DataType>({ data, columns, loading, }: TableDataPro
             placeholder="Search"
             value={searchValue}
             onChange={(event) => setSearchValue(event.target.value)}
-            className="mr-2 md:w-1/4"
+            className="mr-2 md:w-1/4 rounded-lg h-8"
           />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="">
+              <Button variant="outline" className="h-8">
                 Columns <ChevronDown className="ml-2 h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>

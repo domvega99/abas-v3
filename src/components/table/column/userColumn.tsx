@@ -3,20 +3,10 @@
 import * as React from "react"
 import {
   ColumnDef,
-  ColumnFiltersState,
-  SortingState,
-  VisibilityState,
-  flexRender,
-  getCoreRowModel,
-  getFilteredRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
-  useReactTable,
 } from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
+import { ArrowUpDown, MoreHorizontal } from "lucide-react"
  
 import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -26,190 +16,164 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
 import { User } from "../../../../types/userTypes";
 import { Badge } from "../../ui/badge"
 
 export const userColumns: ColumnDef<User>[] = [
-      // {
-      //   id: "select",
-      //   header: ({ table }) => (
-      //     <Checkbox
-      //       checked={
-      //         table.getIsAllPageRowsSelected() ||
-      //         (table.getIsSomePageRowsSelected() && "indeterminate")
-      //       }
-      //       onCheckedChange={(value: any) => table.toggleAllPageRowsSelected(!!value)}
-      //       aria-label="Select all"
-      //     />
-      //   ),
-      //   cell: ({ row }) => (
-      //     <Checkbox
-      //       checked={row.getIsSelected()}
-      //       onCheckedChange={(value: any) => row.toggleSelected(!!value)}
-      //       aria-label="Select row"
-      //     />
-      //   ),
-      //   enableSorting: false,
-      //   enableHiding: false,
-      // },
       {
         accessorKey: "id",
         header: ({ column }) => {
           return (
-            <Button
-              variant="ghost"
+            <div
               onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+              className="flex items-center text-11 cursor-pointer"
             >
               User ID
-              <ArrowUpDown className="ml-2 h-4 w-4" />
-            </Button>
+              <ArrowUpDown className="ml-2 h-3 w-3" />
+            </div>
           )
         },
-        cell: ({ row }) => <div className=" text-xs font-semibold">{row.getValue("id")}</div>,
+        cell: ({ row }) => <div className=" text-11 font-semibold">{row.getValue("id")}</div>,
       },
       {
         accessorKey: "username",
         header: ({ column }) => {
           return (
-            <Button
-              variant="ghost"
+            <div
               onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+              className="flex items-center text-11 cursor-pointer"
             >
               Username
-              <ArrowUpDown className="ml-2 h-4 w-4" />
-            </Button>
+              <ArrowUpDown className="ml-2 h-3 w-3" />
+            </div>
           )
         },
-        cell: ({ row }) => <div className="lowercase text-xs font-semibold">{row.getValue("username")}</div>,
+        cell: ({ row }) => <div className="lowercase text-11 font-semibold">{row.getValue("username")}</div>,
       },
       {
         accessorKey: "first_name",
         header: ({ column }) => {
           return (
-            <Button
-              variant="ghost"
+            <div
               onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+              className="flex items-center text-11 cursor-pointer"
             >
               First Name
-              <ArrowUpDown className="ml-2 h-4 w-4" />
-            </Button>
+              <ArrowUpDown className="ml-2 h-3 w-3" />
+            </div>
           )
         },
-        cell: ({ row }) => <div className="uppercase text-xs font-semibold">{row.getValue("first_name")}</div>,
+        cell: ({ row }) => <div className="uppercase text-11 font-semibold">{row.getValue("first_name")}</div>,
       },
       {
         accessorKey: "middle_name",
         header: ({ column }) => {
           return (
-            <Button
-              variant="ghost"
+            <div
               onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+              className="flex items-center text-11 cursor-pointer"
             >
               Middle Name
-              <ArrowUpDown className="ml-2 h-4 w-4" />
-            </Button>
+              <ArrowUpDown className="ml-2 h-3 w-3" />
+            </div>
           )
         },
-        cell: ({ row }) => <div className="uppercase text-xs font-semibold">{row.getValue("middle_name")}</div>,
+        cell: ({ row }) => <div className="uppercase text-11 font-semibold">{row.getValue("middle_name")}</div>,
       },
       {
         accessorKey: "last_name",
         header: ({ column }) => {
           return (
-            <Button
-              variant="ghost"
+            <div
               onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+              className="flex items-center text-11 cursor-pointer"
             >
               Last Name
-              <ArrowUpDown className="ml-2 h-4 w-4" />
-            </Button>
+              <ArrowUpDown className="ml-2 h-3 w-3" />
+            </div>
           )
         },
-        cell: ({ row }) => <div className="uppercase text-xs font-semibold">{row.getValue("last_name")}</div>,
+        cell: ({ row }) => <div className="uppercase text-11 font-semibold">{row.getValue("last_name")}</div>,
       },
       {
         accessorKey: "email",
         header: ({ column }) => {
           return (
-            <Button
-              variant="ghost"
+            <div
               onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+              className="flex items-center text-11 cursor-pointer"
             >
               Email
-              <ArrowUpDown className="ml-2 h-4 w-4" />
-            </Button>
+              <ArrowUpDown className="ml-2 h-3 w-3" />
+            </div>
           )
         },
-        cell: ({ row }) => <div className="lowercase text-xs font-semibold">{row.getValue("email")}</div>,
+        cell: ({ row }) => <div className="lowercase text-11 font-semibold">{row.getValue("email")}</div>,
       },
       {
         accessorKey: "role",
         header: ({ column }) => {
           return (
-            <Button
-              variant="ghost"
+            <div
               onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+              className="flex items-center text-11 cursor-pointer"
             >
               Role
-              <ArrowUpDown className="ml-2 h-4 w-4" />
-            </Button>
+              <ArrowUpDown className="ml-2 h-3 w-3" />
+            </div>
           )
         },
-        cell: ({ row }) => <div className=" text-xs font-semibold">{row.getValue("role")}</div>,
+        cell: ({ row }) => <div className=" text-11 font-semibold">{row.getValue("role")}</div>,
       },
       {
         accessorKey: "user_location",
         header: ({ column }) => {
           return (
-            <Button
-              variant="ghost"
+            <div
               onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+              className="flex items-center text-11 cursor-pointer"
             >
               Location
-              <ArrowUpDown className="ml-2 h-4 w-4" />
-            </Button>
+              <ArrowUpDown className="ml-2 h-3 w-3" />
+            </div>
           )
         },
-        cell: ({ row }) => <div className=" text-xs font-semibold">{row.getValue("user_location")}</div>,
+        cell: ({ row }) => <div className=" text-11 font-semibold">{row.getValue("user_location")}</div>,
       },
       {
         accessorKey: "stat",
         header: ({ column }) => {
           return (
-            <Button
-              variant="ghost"
+            <div
               onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+              className="flex items-center text-11 cursor-pointer"
             >
               Status
-              <ArrowUpDown className="ml-2 h-4 w-4" />
-            </Button>
+              <ArrowUpDown className="ml-2 h-3 w-3" />
+            </div>
           )
         },
-        cell: ({ row }) => <div className=" text-xs font-semibold"><Badge>{row.getValue("stat")}</Badge></div>,
+        cell: ({ row }) => 
+        <div className=" text-11 font-semibold">
+          {row.getValue("stat") == 'Activated' ? 
+            <Badge variant='success'>{row.getValue("stat")}</Badge> : <Badge variant='destructive'>{row.getValue("stat")}</Badge>
+          }
+        </div>,
       },
       {
         accessorKey: "signature",
         header: ({ column }) => {
           return (
-            <Button
-              variant="ghost"
+            <div
               onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+              className="flex items-center text-11 cursor-pointer"
             >
               Signature
-              <ArrowUpDown className="ml-2 h-4 w-4" />
-            </Button>
+              <ArrowUpDown className="ml-2 h-3 w-3" />
+            </div>
           )
         },
-        cell: ({ row }) => <div className=" text-xs font-semibold">{row.getValue("signature")}</div>,
+        cell: ({ row }) => <div className=" text-11 font-semibold">{row.getValue("signature")}</div>,
       },
       
       {

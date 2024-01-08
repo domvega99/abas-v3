@@ -1,6 +1,8 @@
 
 import axios from 'axios';
 import { Request } from '../../../types/purchasing/requestsType';
+import { Requisition } from '../../../types/purchasing/requisitionType';
+import { RequestItem } from '../../../types/purchasing/requestDetailType';
 import { API_BASE_URL } from '../../../apiConfig';
 
 interface ApiResponse {
@@ -23,6 +25,17 @@ interface ApiResponse {
   };
 }
 
+
+interface SingleResponse {
+  status: string;
+  requisition: Requisition;
+  request_items: RequestItem[];
+  request_attachments: any[]; 
+}
+
+interface RequestItemsResponse {
+  request_items: RequestItem[];
+}
 const api = axios.create({
   baseURL: `${API_BASE_URL}/api`,
   withCredentials: true,
@@ -30,6 +43,20 @@ const api = axios.create({
     'Content-Type': 'application/json',
   },
 });
+export const fetchSingleRequests = async (id: string): Promise<RequestItem[] | null> => {
+  try {
+    const response = await api.get<SingleResponse>(`/purchasing-inventory-request/view/${id}`);
+    const requestItems = response.data.request_items;
+    console.log(requestItems);
+    
+    const simplifiedResponse: RequestItemsResponse = {
+      request_items: requestItems,
+    };
+    return simplifiedResponse.request_items;
+  } catch (error) {
+    throw error;
+  }
+};
 
 export const fetchRequests = async () => {
   try {
