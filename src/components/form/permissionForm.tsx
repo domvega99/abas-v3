@@ -32,7 +32,7 @@ const PermissionForm = () => {
                 <CardHeader>
                     <CardTitle>Permission</CardTitle>
                     <CardDescription>
-                        Make changes to your account permission here. Click save when you're done.
+                        Make changes to your account permission here. Click save when you are done.
                     </CardDescription>
                 </CardHeader>
                 <div className='p-5'>
