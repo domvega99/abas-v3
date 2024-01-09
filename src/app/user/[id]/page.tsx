@@ -19,13 +19,14 @@ import {
 } from "@/components/ui/tabs"
 import UserForm from '@/components/form/userForm'
 import PermissionForm from '@/components/form/permissionForm'
+import AccountForm from '@/components/form/accountForm'
 
 const SingleUser = () => {
 
   return (
     <div>
       {/* {loading ? <Loading/> : ''} */}
-      <div className='md:mx-5 my-5 p-5 rounded-lg bg-white dark:bg-customBgDarkPage'>
+      <div className='md:mx-5 my-5 p-5 rounded-lg bg-white dark:bg-customBgDarkPage min-h-[500px]'>
         <div className='flex w-full'>
         <Tabs defaultValue="basic" className='w-full'>
           <TabsList className="grid grid-cols-3 md:w-1/3">
@@ -38,6 +39,9 @@ const SingleUser = () => {
           </TabsContent>
           <TabsContent value="permission">
             <PermissionForm/>
+          </TabsContent>
+          <TabsContent value="account">
+            <AccountForm/>
           </TabsContent>
         </Tabs>
         </div>

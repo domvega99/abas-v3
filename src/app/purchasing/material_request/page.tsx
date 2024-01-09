@@ -158,7 +158,7 @@ const Page = () => {
                       </TabsList>
                       <TabsContent value="verification">
                         <Card className='p-3'>
-                          <RadioGroup defaultValue="all" className='flex items-center'>
+                          <RadioGroup defaultValue="all" className='flex items-center flex-wrap'>
                             <h1 className=' text-xs font-medium'>Priority : </h1>
                             <div className="flex items-center space-x-1 mr-2">
                               <RadioGroupItem value="all" id="r1" />

@@ -42,7 +42,7 @@ const PermissionForm = () => {
             </div>
             <Accordion type="single" collapsible className="w-full " defaultValue='item-1'>
                 <AccordionItem value="item-1">
-                    <AccordionTrigger className='bg-blue-50 px-5 py-2 text-lg dark:bg-customBgDarkPage'>Purchasing</AccordionTrigger>
+                    <AccordionTrigger className='bg-blue-50 px-5 py-2 text-lg dark:bg-black'>Purchasing</AccordionTrigger>
                     <AccordionContent className='p-3'>
                         <div>
                             <h1 className='ml-2 font-semibold text-base text-gray-500'>Inventory Requests</h1>
@@ -99,7 +99,7 @@ const PermissionForm = () => {
             </Accordion>
             <Accordion type="single" collapsible className="w-full" defaultValue='item-1'>
                 <AccordionItem value="item-1">
-                    <AccordionTrigger className='bg-blue-50 px-5 py-2 text-lg dark:bg-customBgDarkPage'>Human Resources</AccordionTrigger>
+                    <AccordionTrigger className='bg-blue-50 px-5 py-2 text-lg dark:bg-black'>Human Resources</AccordionTrigger>
                     <AccordionContent className='p-3'>
                         <h1 className=' text-center font-semibold text-base text-gray-500'>Employees</h1>
                         <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4 my-2 mx-2'>
